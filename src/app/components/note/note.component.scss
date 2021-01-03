@@ -1,0 +1,19 @@
+:host {
+  border: 3px double gray;
+  margin: 10px;
+
+  mat-card-actions {
+    text-align: center;
+  }
+
+  mat-card-header {
+    text-align: center;
+  }
+
+  mat-card-content {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 200px;
+  }
+}

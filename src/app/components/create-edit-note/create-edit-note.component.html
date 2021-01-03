@@ -1,0 +1,16 @@
+<section mat-dialog-content>
+  <form [formGroup]="form">
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput type="text" formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Content</mat-label>
+      <input matInput type="text" formControlName="content">
+    </mat-form-field>
+
+    <button *ngIf="!isEdit" mat-raised-button color="primary" (click)="addNote()" [disabled]="form.invalid">Add Note</button>
+    <button *ngIf="isEdit" mat-raised-button color="primary" (click)="editNote()" [disabled]="form.invalid">Edit Note</button>
+  </form>
+</section>

@@ -1,0 +1,12 @@
+<mat-card (click)="view()">
+  <mat-card-header>
+    <mat-card-title>{{note.name}}</mat-card-title>
+    <mat-card-subtitle>{{note.date | date: 'MMMM d, y, h:mm:ss a'}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    {{note.content}}
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="warn" (click)="del()">Delete</button>
+  </mat-card-actions>
+</mat-card>
