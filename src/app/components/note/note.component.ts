@@ -23,7 +23,7 @@ export class NoteComponent {
   view(): void {
     this.dialog.open(CreateEditNoteComponent, {
       width: '300px',
-      data: {...this.note}
+      data: this.note
     }).afterClosed().subscribe(() => this.note = this.notesService.getNote(this.note.id));
   }
 }
